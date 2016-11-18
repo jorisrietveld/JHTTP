@@ -100,15 +100,14 @@ class ParameterContainer implements \IteratorAggregate, \Countable, \ArrayAccess
     }
 
     /**
-     * Get all parameter keys from the container. Optionally only get the keys of the container with values defined
-     * in the $searchValues argument.
+     * Get all parameter keys from the container.
      *
      * @param null $searchValues
      * @return array
      */
-    public function keys( $searchValues = null ) : array
+    public function keys(  ) : array
     {
-        return array_keys( $this->parameters, $searchValues );
+        return array_keys( $this->parameters );
     }
 
     /**
@@ -173,7 +172,7 @@ class ParameterContainer implements \IteratorAggregate, \Countable, \ArrayAccess
      */
     public function getBoolean( $key, $default = false ) : bool
     {
-        return (boolean)$this->get( $key, $default );
+        return $this->filter( $key, $default, FILTER_VALIDATE_BOOLEAN );
     }
 
     /**
@@ -241,6 +240,6 @@ class ParameterContainer implements \IteratorAggregate, \Countable, \ArrayAccess
      */
     public function count() : int
     {
-        return $this->count( $this->parameters );
+        return count( $this->parameters );
     }
 }
