@@ -1,0 +1,18 @@
+{
+    "name": "jorisrietveld/j-http",
+    "description": "An package for educational puroposes for better understanding HTTP and symfony",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^5.6",
+        "symfony/http-foundation": "^3.1"
+    },
+    "license": "GPLv3 General Public Licence version 3 <www.gnu.org/licences/gpl-3.0.html>",
+    "authors": [
+        {
+            "name": "Joris Rietveld",
+            "email": "jorisrietveld@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

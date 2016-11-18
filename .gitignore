@@ -1,0 +1,36 @@
+### Composer
+composer.phar
+/vendor/
+
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### JetBrains
+# this will prevent the tracking of IDE settings in git.
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/php.xml
+.idea/modules.xml
+.idea/JHTTP.time
+.idea/misc.xml
+.idea/JHTTP.iml
+.idea/composerJson.xml
+.idea/copyright/profiles_settings.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Just to be sure :)
+.idea/*
+
