@@ -8,9 +8,9 @@
 namespace JHTTP\Session\Storage;
 
 
-use JHTTP\Session\SessionContainerContract;
+use JHTTP\Session\SessionContainerInterface;
 
-interface SessionStorageContract
+interface SessionStorageInterface
 {
     /**
      * Starts the session.
@@ -78,18 +78,18 @@ interface SessionStorageContract
      * Gets a SessionContainerContract by its name.
      *
      * @param string $name
-     * @return SessionContainerContract
+     * @return SessionContainerInterface
      *
      * @throws \InvalidArgumentException If the container does not exist
      */
-    public function getContainer( string $name ) : SessionContainerContract;
+    public function getContainer( string $name ) : SessionContainerInterface;
 
     /**
      * Registers a SessionContainerContract for use.
      *
-     * @param SessionContainerContract $sessionContainer
+     * @param SessionContainerInterface $sessionContainer
      */
-    public function registerContainer( SessionContainerContract $sessionContainer );
+    public function registerContainer( SessionContainerInterface $sessionContainer );
 
     /**
      * Returns the container with the sessions metadata.

@@ -8,7 +8,7 @@
 namespace JHTTP\Session\Storage\Handler;
 
 
-class NativeSessionHandler
+class NativeSessionHandler extends \SessionHandler
 {
 
 }

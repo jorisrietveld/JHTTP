@@ -13,7 +13,7 @@ namespace JHTTP\Session;
  *
  * @package JHTTP\Session
  */
-interface SessionContainerContract
+interface SessionContainerInterface
 {
     /**
      * Get the name of the container.

@@ -9,21 +9,21 @@ namespace JHTTP\Session;
 
 
 use JHTTP\Session\Attribute\AttributeContainer;
-use JHTTP\Session\Attribute\AttributeContainerContract;
+use JHTTP\Session\Attribute\AttributeContainerInterface;
 use JHTTP\Session\Flash\FlashContainer;
-use JHTTP\Session\Flash\FlashContainerContract;
+use JHTTP\Session\Flash\FlashContainerInterface;
 use JHTTP\Session\Storage\MetaDataContainer;
 use JHTTP\Session\Storage\NativeSessionStorage;
-use JHTTP\Session\Storage\SessionStorageContract;
+use JHTTP\Session\Storage\SessionStorageInterface;
 use Traversable;
 
-class Session implements \IteratorAggregate, \Countable, SessionContract
+class Session implements \IteratorAggregate, \Countable, SessionInterface
 {
 
     /**
      * Session storage driver.
      *
-     * @var SessionStorageContract
+     * @var SessionStorageInterface
      */
     protected $storage;
 
@@ -44,11 +44,11 @@ class Session implements \IteratorAggregate, \Countable, SessionContract
     /**
      * Initiate an new session instance.
      *
-     * @param SessionStorageContract     $storage    A SessionStorageContract instance
-     * @param AttributeContainerContract $attributes An AttributeContainerContract instance, on default it will create an Attribute\AttributeContainer.
-     * @param FlashContainerContract     $flashes    A FlashContainerContract instance, on default it will create a Flash\FlashContainer)
+     * @param SessionStorageInterface     $storage    A SessionStorageContract instance
+     * @param AttributeContainerInterface $attributes An AttributeContainerContract instance, on default it will create an Attribute\AttributeContainer.
+     * @param FlashContainerInterface     $flashes    A FlashContainerContract instance, on default it will create a Flash\FlashContainer)
      */
-    public function __construct( SessionStorageContract $storage = null, AttributeContainerContract $attributes = null, FlashContainerContract $flashes = null )
+    public function __construct( SessionStorageInterface $storage = null, AttributeContainerInterface $attributes = null, FlashContainerInterface $flashes = null )
     {
         $this->storage = $storage ?: new NativeSessionStorage();
         $attributes = $attributes ?: new AttributeContainer();
@@ -226,7 +226,7 @@ class Session implements \IteratorAggregate, \Countable, SessionContract
      *
      * @param $sessionContainer $sessionStorageContainer
      */
-    public function registerContainer( SessionContainerContract $sessionContainer )
+    public function registerContainer( SessionContainerInterface $sessionContainer )
     {
         // TODO: Implement registerContainer() method.
     }
@@ -236,9 +236,9 @@ class Session implements \IteratorAggregate, \Countable, SessionContract
      *
      * @param string $name
      *
-     * @return SessionContainerContract
+     * @return SessionContainerInterface
      */
-    public function getContainer( string $name ) : SessionContainerContract
+    public function getContainer( string $name ) : SessionContainerInterface
     {
         // TODO: Implement getBag() method.
     }
@@ -256,7 +256,7 @@ class Session implements \IteratorAggregate, \Countable, SessionContract
     /**
      * Gets the flashbag interface.
      *
-     * @return FlashContainerContract
+     * @return FlashContainerInterface
      */
     public function getFlashContainer()
     {

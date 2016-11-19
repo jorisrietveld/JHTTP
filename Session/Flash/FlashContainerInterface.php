@@ -8,9 +8,9 @@
 namespace JHTTP\Session\Flash;
 
 
-use JHTTP\Session\SessionContainerContract;
+use JHTTP\Session\SessionContainerInterface;
 
-interface FlashContainerContract extends SessionContainerContract
+interface FlashContainerInterface extends SessionContainerInterface
 {
     /**
      * Adds a flash message.

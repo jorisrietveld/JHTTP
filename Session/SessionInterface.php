@@ -15,7 +15,7 @@ use JHTTP\Session\Storage\MetaDataContainer;
  *
  * @package JHTTP\Session
  */
-interface SessionContract
+interface SessionInterface
 {
     /**
      * Starts the session.
@@ -137,16 +137,16 @@ interface SessionContract
      *
      * @param $sessionContainer $sessionStorageContainer
      */
-    public function registerContainer( SessionContainerContract $sessionContainer );
+    public function registerContainer( SessionContainerInterface $sessionContainer );
 
     /**
      * Gets a session container instance by name.
      *
      * @param string $name
      *
-     * @return SessionContainerContract
+     * @return SessionContainerInterface
      */
-    public function getContainer( string $name ) : SessionContainerContract;
+    public function getContainer( string $name ) : SessionContainerInterface;
 
     /**
      * Gets session metadata.

@@ -8,10 +8,10 @@
 namespace JHTTP\Session\Storage;
 
 
-use JHTTP\Session\SessionContainerContract;
-use JHTTP\Session\Storage\Handler\SessionHandlerContract;
+use JHTTP\Session\SessionContainerInterface;
+use JHTTP\Session\Storage\Handler\SessionHandlerInterface;
 
-class NativeSessionStorage implements SessionStorageContract
+class NativeSessionStorage implements SessionStorageInterface
 {
     protected $containers;
     protected $started;
@@ -53,9 +53,9 @@ class NativeSessionStorage implements SessionStorageContract
      * session.upload_progress.min-freq, "1"
      * session.url_rewriter.tags, "a=href,area=href,frame=src,form=,fieldset="
      *
-     * @param array                  $options           Session configuration options
-     * @param SessionHandlerContract $handler
-     * @param MetaDataContainer      $metaDataContainer The Metadata container.
+     * @param array                   $options           Session configuration options
+     * @param SessionHandlerInterface $handler
+     * @param MetaDataContainer       $metaDataContainer The Metadata container.
      */
     public function __construct( array $options = [], $handler = NULL, MetaDataContainer $metaDataContainer = NULL )
     {
@@ -231,11 +231,11 @@ class NativeSessionStorage implements SessionStorageContract
      * Gets a SessionContainerContract by its name.
      *
      * @param string $name
-     * @return SessionContainerContract
+     * @return SessionContainerInterface
      *
      * @throws \InvalidArgumentException If the container does not exist
      */
-    public function getContainer( string $name ) : SessionContainerContract
+    public function getContainer( string $name ) : SessionContainerInterface
     {
         // TODO: Implement getContainer() method.
     }
@@ -243,9 +243,9 @@ class NativeSessionStorage implements SessionStorageContract
     /**
      * Registers a SessionContainerContract for use.
      *
-     * @param SessionContainerContract $sessionContainer
+     * @param SessionContainerInterface $sessionContainer
      */
-    public function registerContainer( SessionContainerContract $sessionContainer )
+    public function registerContainer( SessionContainerInterface $sessionContainer )
     {
         // TODO: Implement registerContainer() method.
     }

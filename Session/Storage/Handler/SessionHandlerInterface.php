@@ -8,7 +8,7 @@
 namespace JHTTP\Session\Storage\Handler;
 
 
-interface SessionHandlerContract
+interface SessionHandlerInterface
 {
 
 }

@@ -8,9 +8,9 @@
 namespace JHTTP\Session\Attribute;
 
 
-use JHTTP\Session\SessionContainerContract;
+use JHTTP\Session\SessionContainerInterface;
 
-interface AttributeContainerContract extends SessionContainerContract
+interface AttributeContainerInterface extends SessionContainerInterface
 {
     /**
      * Checks if an attribute is defined.

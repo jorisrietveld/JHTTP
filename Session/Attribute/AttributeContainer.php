@@ -10,7 +10,7 @@ namespace JHTTP\Session\Attribute;
 
 use Traversable;
 
-class AttributeContainer implements \IteratorAggregate, \Countable, AttributeContainerContract
+class AttributeContainer implements \IteratorAggregate, \Countable, AttributeContainerInterface
 {
     /**
      * Checks if an attribute is defined.

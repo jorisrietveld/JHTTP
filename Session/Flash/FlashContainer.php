@@ -8,7 +8,7 @@
 namespace JHTTP\Session\Flash;
 
 
-class FlashContainer implements FlashContainerContract
+class FlashContainer implements FlashContainerInterface
 {
     /**
      * Adds a flash message.
